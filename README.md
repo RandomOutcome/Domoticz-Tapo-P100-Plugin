@@ -87,7 +87,7 @@ execution Path.  The *p100.py* module can be used from the command line directly
 The loosely coupled approach has been adopted as the plugp100 library uses an asyncio approach which causes errors if implemented directly inside a Domoticz
 *plugin.py* module.
 
-For security the username, password and ip address are passwed to the *p100.py* module via the environemnt to the details will not be visible to system utilities.
+For security the username, password and ip address are passwed to the *p100.py* module via the environment so the details will not be visible to system utilities.
 
 **command line usage**
 
