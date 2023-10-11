@@ -1,4 +1,4 @@
-# LoopbackSerial Library
+# Domotic\ TP-Link TAPO P100 Integration
  
  This library adds memory based serial communication, between software components, to an Arduino device.
  ___
