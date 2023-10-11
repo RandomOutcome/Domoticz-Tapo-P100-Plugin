@@ -43,7 +43,7 @@ This Domoticz plugin allows control of TP-Link Tapo P100 WiFi controlled plugs f
   Requires [@petretiandrea](https://github.com/petretiandrea) port of the [plugp100](https://github.com/petretiandrea/plugp100) Python module to be installed, follow the 
   instruction in the link to install. [@petretiandrea](https://github.com/petretiandrea) version of plugp100 required Python v3.10 or above to be installed to work. 
     
-  If using Python v3.8 or v3.9, the backported version of [plugip](https://github.com/RandomOutcome/plugp100-3.9) can be used instead, follow the instructions in the link to 
+  If using Python v3.8 or v3.9, the backported version of [plugp100](https://github.com/RandomOutcome/plugp100-3.9) can be used instead, follow the instructions in the link to 
   install.  
     
   Python version prior to 3.8 are not supported. 
