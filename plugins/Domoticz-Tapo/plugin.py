@@ -3,11 +3,11 @@
 # Author: 593304
 #
 """
-<plugin key="TapoPlugin" name="TP-Link Tapo Plugin" author="593304" version="0.2" externallink="">
+<plugin key="TapoPlugin" name="TP-Link Tapo Plugin" author="999999" version="0.1" externallink="">
     <description>
         <h2>TP-Link Tapo Plugin</h2><br/>
         <p>The plugin will connect to a Tapo device with the given IP address, username(e-mail address) and password.</p>
-        <p>Before using this plugin, you have to install the<a href="https://pypi.org/project/PyP100/" style="margin-left: 5px">PyP100 module</a></p>
+        <p>Before using this plugin, you have to install the<a href="https://github.com/petretiandrea/plugp100" style="margin-left: 5px">PlugP100 module</a></p>
         <br />
         <br />
     </description>
@@ -106,10 +106,6 @@ class TapoPlugin:
         if self.unit not in Devices:
             typeName = "Selector Switch"
             switchType = 0
-            # ToDo: Need a real Tapo bulb to create the dimmer/color switch device for Domoticz
-            #if "bulb" in self.lastState["type"].lower():
-            #    typeName = ...
-            #    switchType = ...
             
             Domoticz.Device(
                 Name = self.lastState["PlugDeviceState"]["info"]["DeviceInfo"]["friendly_name"],
@@ -182,7 +178,6 @@ class TapoPlugin:
         if self.unit not in Devices or not updateDomoticz:
             return
 
-        # ToDo: Need a real Tapo bulb to properly update Domoticz device with not just the power state
         powerState = self.lastState["PlugDeviceState"]["device_on"]
         powerStateValue = 1 if powerState else 0
         powerStateStr = "On" if powerState else "Off"
