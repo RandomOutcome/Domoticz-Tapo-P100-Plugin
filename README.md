@@ -54,9 +54,13 @@ This Domoticz plugin allows control of TP-Link Tapo P100 WiFi controlled plugs f
 
 **Adding P100 Plugs:** 
 
-(https://github.com/RandomOutcome/Domoticz-Tapo-P100-Plugin/images/P100-plugin-config.png)
-  
-    
+![Domoticz Plugin](images/P100-plugin-config.png?raw=true "Domoticz Plugin Config")
+
+**Usage:** 
+
+![Domoticz Usage](images/P100-Switch.png?raw=true "Domoticz P100 Switch")
+
 ## Plugin Implementation Details:
   To-Do
-
+  
+python p100.py [on|off|info] [username] [password] [ip]
