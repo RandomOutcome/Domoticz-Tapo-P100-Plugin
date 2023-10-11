@@ -48,7 +48,7 @@ The plugin is based on the [Domoticz-Tapo plugin](https://github.com/593304/Domo
   If using Python v3.8 or v3.9, the backported version of [plugp100](https://github.com/RandomOutcome/plugp100-3.9) can be used instead, follow the instructions in the link to 
   install.  
     
-  Python version prior to 3.8 are not supported. 
+  Python versions prior to 3.8 are not supported. 
     
 ## Domoticz Configuration:
 
@@ -88,7 +88,7 @@ execution Path.  The *p100.py* module can be used from the command line directly
 The loosely coupled approach has been adopted as the plugp100 library uses an asyncio approach which causes errors if implemented directly inside a Domoticz
 *plugin.py* module.
 
-For security the username, password and ip address are passwed to the *p100.py* module via the environment so the details will not be visible to system utilities.
+For security the username, password and ip address are passed to the *p100.py* module via the environment so the details will not be visible to system utilities.
 
 **command line usage**
 
