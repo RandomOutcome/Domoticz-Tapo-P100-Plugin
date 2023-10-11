@@ -76,7 +76,7 @@ You can also:
 - Edit the device's Domoticz settings and icon.
 - Setup notificatoins to be sent when using the device.
 
-Domoticz Usage](images/P100-Switch.png?raw=true "Domoticz P100 Switch")
+![Domoticz Usage](images/P100-Switch.png?raw=true "Domoticz P100 Switch")
 
 ## Plugin Implementation Details:
 
