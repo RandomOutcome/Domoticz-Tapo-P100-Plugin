@@ -37,6 +37,8 @@ This Domoticz plugin allows control of TP-Link Tapo P100 WiFi controlled plugs f
 
 - A helper Python model p100.py will also be created in folder when the dowloaded file is unzipped. This file needs to be moved into a folder on the executable path of your
   Domoticz installation, for example into **[Domoticz Dir]**/.local/bin on Linux.
+
+- Restart domoticz.
    
 **Supporting Installation Requirements:** 
 
@@ -49,7 +51,11 @@ This Domoticz plugin allows control of TP-Link Tapo P100 WiFi controlled plugs f
   Python version prior to 3.8 are not supported. 
     
 ## Domoticz Configuration:
-  To-Do
+
+**Adding P100 Plugs:** 
+
+(https://github.com/RandomOutcome/Domoticz-Tapo-P100-Plugin/images/P100-plugin-config.png)
+  
     
 ## Plugin Implementation Details:
   To-Do
