@@ -17,7 +17,7 @@ This Domoticz plugin allows control of TP-Link Tapo P100 WiFi controlled plugs f
 - The plugin only supports On & Off functionallity and basic monitoring of the device's relay status.
 - P100 plugs must be configured first via the Tapo app, once configured the username, password and IP address assigned to each plug are used to configure the plug
   devices into Domoticz.
-- Depends upon the Python module plugp100.
+- Depends upon the Python library plugp100.
 - Requires Python versions 3.8 and above.
 
 ### Features
@@ -29,18 +29,17 @@ This Domoticz plugin allows control of TP-Link Tapo P100 WiFi controlled plugs f
 
 **Plugin:**
 - Download the plugin's zip from from Github.
-- Copy the downloaded zip file to the directory where Domoticz is installe
+- Copy the downloaded zip file to the directory where Domoticz is installed
 - Unzip the downlaoded zip file.
 - The plugin wil be installed into **[Domoticz Dir]**/plugsin/Domoticz-Tapo
 - If co-installing with other Tapo plugins ensure the directory doesn't clash prior to unzipping, if clashes unzip elsewhere and rename the plugins/Domoticz-Tapo directory
   and manually copy the directory plugins directory and p100.py file into the **[Domoticz Dir]** folder.
-
 - A helper Python model p100.py will also be created in folder when the dowloaded file is unzipped. This file needs to be moved into a folder on the executable path of your
-  Domoticz installation, for example into **[Domoticz Dir]**/.local/bin on Linux.
+  Domoticz installation, for example **[Domoticz Dir]**/.local/bin on Linux.
 
-- Restart domoticz.
+- Restart Domoticz.
    
-**Supporting Installation Requirements:** 
+**Python Library Module Requirements:** 
 
   Requires [@petretiandrea](https://github.com/petretiandrea) port of the [plugp100](https://github.com/petretiandrea/plugp100) Python module to be installed, follow the 
   instruction in the link to install. [@petretiandrea](https://github.com/petretiandrea) version of plugp100 required Python v3.10 or above to be installed to work. 
@@ -54,13 +53,54 @@ This Domoticz plugin allows control of TP-Link Tapo P100 WiFi controlled plugs f
 
 **Adding P100 Plugs:** 
 
+To add a Tapo plug device in Domoticz, select Hardware from the mention scroll down to the configuration form.
+Enter a Name for the device's function, e.g. Lounge Rear Left Light, select the type "TP-Link Tapo Plugin" from the type dropdown.
+Select any logging details you wish to record via the tick boxes.
+Set Data Timeout to disabled.
+Set the Username (Tapo email address), Password and devices IP address as configured in the Tapo App when you setup the plug.
+Set Debug to off (unless having issues 
+
+Click Add.
+
 ![Domoticz Plugin](images/P100-plugin-config.png?raw=true "Domoticz Plugin Config")
+
+If changing details highlight the Hardware device in the list you wish to change, modify the details as required in the same form as above, then click Update.
+To remove a device, highlight the Hardware device to remove and click Delete.
 
 **Usage:** 
 
-![Domoticz Usage](images/P100-Switch.png?raw=true "Domoticz P100 Switch")
+The configured plug device should now appear in the Switches panel and can be controlled from here by clicing on the devices icon.  
+You can also:
+- View the log of the device usages.
+- Setup timers to automatically control the device.
+- Edit the device's Domoticz settings and icon.
+- Setup notificatoins to be sent when using the device.
+
+Domoticz Usage](images/P100-Switch.png?raw=true "Domoticz P100 Switch")
 
 ## Plugin Implementation Details:
-  To-Do
-  
-python p100.py [on|off|info] [username] [password] [ip]
+
+The plugin uses a losely coupled implementation to control P100 (and potentially other Tapo) devices. The *plugin.py* module provides the interface to Domoticz to
+request *On/Off* actions and request plug status. This calls a command line module *p100.py* to communicate with the plug, *p100.py* must be located in the Domoticz 
+execution Path.  The *p100.py* module can be used from the command line directly if wished (details below).
+
+The loosely coupled approach has been adopted as the plugp100 library uses an asyncio approach which causes errors if implemented directly inside a Domoticz
+*plugin.py* module.
+
+For security the username, password and ip address are passwed to the *p100.py* module via the environemnt to the details will not be visible to system utilities.
+
+**command line usage**
+
+  *python p100.py [on|off|info] [username] [password] [ip]*
+
+  Turn a plug *on* / *off* or request device status *info*rmation (json format response)
+
+*or*
+
+  *python p100.py [on|off|info]*
+
+  with enviroment variables:
+  ***TAPO_USERNAME*** for the username/email configured in the Tapo App for the device
+  ***TAPO_PASSWORD*** for the password configured in the Tapo App for the device
+  ***TAPO_DEVICEIP*** for the devices IP address
+
