@@ -21,37 +21,36 @@ This Domoticz plugin allows control of TP-Link Tapo P100 WiFi controlled plugs f
 - Requires Python versions 3.8 and above.
 
 ### Features
--   Provides basic on/off relay control for Tapo P100 plugs (may work on other models)
--   Each plug is configured as a separate Domoticz hardware instance
--   Can co-reside with other Domoticz Tapo plugin modules
+- Provides basic on/off relay control for Tapo P100 plugs (may work on other models)
+- Each plug is configured as a separate Domoticz hardware instance
+- Can co-reside with other Domoticz Tapo plugin modules
 
 ### Installation
 
 **Plugin:**
+- Download the plugin's zip from from Github.
+- Copy the downloaded zip file to the directory where Domoticz is installe
+- Unzip the downlaoded zip file.
+- The plugin wil be installed into **[Domoticz Dir]**/plugsin/Domoticz-Tapo
+- If co-installing with other Tapo plugins ensure the directory doesn't clash prior to unzipping, if clashes unzip elsewhere and rename the plugins/Domoticz-Tapo directory
+  and manually copy the directory plugins directory and p100.py file into the **[Domoticz Dir]** folder.
 
-    Download the plugin's zip from from Github.
-    Copy the downloaded zip file to the directory where Domoticz is installed
-    Unzip the downlaoded zip file.
-    The plugin wil be installed into **[Domoticz Dir]**/plugsin/Domoticz-Tapo
-    If co-installing with other Tapo plugins ensure the directory doesn't clash prior to unzipping, if clashes unzip elsewhere and rename the plugins/Domoticz-Tapo directory
-    and manually copy the directory plugins directory and p100.py file into the **[Domoticz Dir]** folder.
-
-    A helper Python model p100.py will also be created in folder when the dowloaded file is unzipped. This file needs to be moved into a folder on the executable path of your
-    Domoticz installation, for example into **[Domoticz Dir]**/.local/bin on Linux.
+- A helper Python model p100.py will also be created in folder when the dowloaded file is unzipped. This file needs to be moved into a folder on the executable path of your
+  Domoticz installation, for example into **[Domoticz Dir]**/.local/bin on Linux.
    
 **Supporting Installation Requirements:** 
 
-    Requires [@petretiandrea](https://github.com/petretiandrea) port of the [plugp100](https://github.com/petretiandrea/plugp100) Python module to be installed, follow the 
-    instruction in the link to install. [@petretiandrea](https://github.com/petretiandrea) version of plugp100 required Python v3.10 or above to be installed to work. 
+  Requires [@petretiandrea](https://github.com/petretiandrea) port of the [plugp100](https://github.com/petretiandrea/plugp100) Python module to be installed, follow the 
+  instruction in the link to install. [@petretiandrea](https://github.com/petretiandrea) version of plugp100 required Python v3.10 or above to be installed to work. 
     
-    If using Python v3.8 or v3.9, the backported version of [plugip](https://github.com/RandomOutcome/plugp100-3.9) can be used instead, follow the instructions in the link to 
-    install.  
+  If using Python v3.8 or v3.9, the backported version of [plugip](https://github.com/RandomOutcome/plugp100-3.9) can be used instead, follow the instructions in the link to 
+  install.  
     
-    Python version prior to 3.8 are not supported. 
+  Python version prior to 3.8 are not supported. 
     
 ## Domoticz Configuration:
-To-Do
+  To-Do
     
 ## Plugin Implementation Details:
-To-Do
+  To-Do
 
