@@ -1,4 +1,4 @@
-# Domoticz TP-Link TAPO P100 Integration - README Work In Progress
+# Domoticz TP-Link TAPO P100 Integration
 This pliugin provides basic control of TP-Link Tapo P100 devices, with firmware from 2023 onwards, from Domoticz.
 ___
 Author: RandomOutcome | Status: Pre-Release
@@ -54,7 +54,7 @@ This Domoticz plugin allows control of TP-Link Tapo P100 WiFi controlled plugs f
 **Adding P100 Plugs:** 
 
 To add a Tapo plug device in Domoticz, select Hardware from the mention scroll down to the configuration form.
-Enter a Name for the device's function, e.g. Lounge Rear Left Light, select the type "TP-Link Tapo Plugin" from the type dropdown.
+Enter a Name for the device's function, e.g. Lounge Rear Right Light, select the type "TP-Link Tapo Plugin" from the type dropdown.
 Select any logging details you wish to record via the tick boxes.
 Set Data Timeout to disabled.
 Set the Username (Tapo email address), Password and devices IP address as configured in the Tapo App when you setup the plug.
