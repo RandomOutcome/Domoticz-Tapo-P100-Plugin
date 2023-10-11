@@ -100,7 +100,7 @@ For security the username, password and ip address are passwed to the *p100.py* 
   *python p100.py [on|off|info]*
 
   with enviroment variables:
-  ***TAPO_USERNAME*** for the username/email configured in the Tapo App for the device
-  ***TAPO_PASSWORD*** for the password configured in the Tapo App for the device
-  ***TAPO_DEVICEIP*** for the devices IP address
+  - ***TAPO_USERNAME*** for the username/email configured in the Tapo App for the device
+  - ***TAPO_PASSWORD*** for the password configured in the Tapo App for the device
+  - ***TAPO_DEVICEIP*** for the devices IP address
 
