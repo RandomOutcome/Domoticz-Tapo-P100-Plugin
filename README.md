@@ -91,13 +91,13 @@ For security the username, password and ip address are passwed to the *p100.py* 
 
 **command line usage**
 
-  *python p100.py [on|off|info] [username] [password] [ip]*
+  ```python p100.py [on|off|info] [username] [password] [ip]```
 
   Turn a plug *on* / *off* or request device status *info*rmation (json format response)
 
 *or*
 
-  *python p100.py [on|off|info]*
+  ```python p100.py [on|off|info]```
 
   with enviroment variables:
   - ***TAPO_USERNAME*** for the username/email configured in the Tapo App for the device
