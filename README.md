@@ -33,8 +33,8 @@ The plugin is based on the [Domoticz-Tapo plugin](https://github.com/593304/Domo
 - Copy the downloaded zip file to the directory where Domoticz is installed
 - Unzip the downlaoded zip file.
 - The plugin wil be installed into **[Domoticz Dir]**/plugins/Domoticz-Tapo
-- If co-installing with other Tapo plugins ensure the directory doesn't clash prior to unzipping, if clashes unzip elsewhere and rename the plugins/Domoticz-Tapo directory
-  and manually copy the directory plugins directory and p100.py file into the **[Domoticz Dir]** folder.
+- If co-installing with other Tapo plugins ensure the directory doesn't clash prior to unzipping. If clashes would oocur unzip elsewhere and rename the plugins/Domoticz-Tapo
+  directory and manually copy the directory plugins directory and p100.py file into the **[Domoticz Dir]** folder.
 - A helper Python model p100.py will also be created in folder when the dowloaded file is unzipped. This file needs to be moved into a folder on the executable path of your
   Domoticz installation, for example **[Domoticz Dir]**/.local/bin on Linux.
 
@@ -83,12 +83,14 @@ You can also:
 
 The plugin uses a losely coupled implementation to control P100 (and potentially other Tapo) devices. The *plugin.py* module provides the interface to Domoticz to
 request *On/Off* actions and request plug status. This calls a command line module *p100.py* to communicate with the plug, *p100.py* must be located in the Domoticz 
-execution Path.  The *p100.py* module can be used from the command line directly if wished (details below).
+execution Path. The *p100.py* module can be used from the command line directly if wished (details below).
 
-The loosely coupled approach has been adopted as the plugp100 library uses an asyncio approach which causes errors if implemented directly inside a Domoticz
+The loosely coupled approach has been adopted as the plugp100 library uses an asyncio approach, which causes errors if implemented directly inside a Domoticz
 *plugin.py* module.
 
 For security the username, password and ip address are passed to the *p100.py* module via the environment so the details will not be visible to system utilities.
+
+The plugin.py module itself is based upon [593304's](https://github.com/593304/Domoticz-Tapo) plugin from the Domoticz [Plugin wiki age](https://www.domoticz.com/wiki/Plugins).
 
 **command line usage**
 
