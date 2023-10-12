@@ -75,7 +75,7 @@ You can also:
 - View the log of the device usages.
 - Setup timers to automatically control the device.
 - Edit the device's Domoticz settings and icon.
-- Setup notificatoins to be sent when using the device.
+- Setup notifications to be sent when using the device.
 
 ![Domoticz Usage](images/P100-Switch.png?raw=true "Domoticz P100 Switch")
 
