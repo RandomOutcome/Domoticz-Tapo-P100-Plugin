@@ -1,7 +1,7 @@
 # Domoticz TP-Link TAPO P100 Integration
 This plugin provides basic control of TP-Link Tapo P100 devices, with firmware from 2023 onwards, from Domoticz.
 ___
-Author: RandomOutcome | Status: Pre-Release
+Author: RandomOutcome | Status: Beta Release
 ___
 
 ### Domoticz plugin for Tapo P100 control, for Tapo devices with firmware upgrade in 2023 that changed the device communication protocol breaking earlier plugins
